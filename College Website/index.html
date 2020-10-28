@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>College Website</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class = "bg">
+    <header>
+      <div class="header">
+        <p><b>COLLEGE NAME</b></p>
+      </div>
+    </header>
+    <main>
+      <!--navigation-->
+      <div class="clearfix">
+        <div class="box" style="background-color:#ec7063;">
+        <a style= "text-decoration: none;" href="about.html">ABOUT</a>
+        </div>
+        <div class="box" style="background-color:#a569bd">
+        <a style= "text-decoration: none;" href="notices.html">NOTICE</a>
+        </div>
+        <div class="box" style="background-color:#5dade2">
+        <a style= "text-decoration: none;" href="clubs.html">CLUBS</a>
+        </div>
+        <div class="box" style="background-color:#45b39d">
+        <a style= "text-decoration: none;" href="library.html">LIBRARY</a>
+        </div>
+        <div class="box" style="background-color:#58d68d">
+        <a style= "text-decoration: none;" href="gallery.html">GALLERY</a>
+        </div>
+        <div class="box" style="background-color:#e67e22">
+        <a style= "text-decoration: none;" href="admission.html">ADMISSION</a>
+        </div>
+      </div>
+      <br><br><br><br><br>
+      <!--quote-->
+      <div class="blur">
+        <b class="left">"মানুষ তার স্বপ্নের সমান</b><br><p><b class="right">বড়"</b></p>
+      </div>
+      <br>
+
+      <!--SUCCESS STORIES-->
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <table>
+            <tr>
+              <td><img src="images/student1.png" style="width:300px"></td>
+              <td><div class="text"><h3 style="color:#ec7063" >Against all odds</h3><p>Suparna is from West Bengal, India. She is the eldest of three children, and today, she is a mother herself, with a 4-year-old son. She comes from a background in which female education is considered sinful, and Suparna had to overcome incredible obstacles in order to complete her formal education...</p><br><a href="story1.html"style="text-decoration:none;">Read more</a></div></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="mySlides fade">
+          <table>
+            <tr>
+              <td><img src="images/student2.jpg" style="width:300px"></td>
+              <td><div class="text"><h3 style="color:#ec7063" >You dont need 200IQ to get good grades.</h3><p>Angelina Cash from California hacked into her college's servers and gave her 100% grades in all subjects...</p><br><a href="story2.html"style="text-decoration:none;">Read more</a></div></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="mySlides fade">
+          <table>
+            <tr>
+              <td><img src="images/student3.jpg" style="width:300px"></td>
+              <td><div class="text"><h3 style="color:#ec7063" >Video games dosent cause violence.</h3><p>This kid made atom models inside minecraft. A true genius...</p><br><a href="story3.html"style="text-decoration:none;">Read more</a></div></td>
+            </tr>
+          </table>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </main>
+    <footer>
+      <br><br>
+      <div class="footer">
+        <p>FACEBOOK: [Facebook link here]</p>
+        <p>LOCATION: [Google map location here]</p>
+        <p>CONTACT: [Contact numbers]</p>
+        <p>EMAIL: [Email address]</p>
+      </div>
+    </footer>
+    <!--java script for slideshow-->
+    <script type="text/javascript">
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    }
+    </script>
+  </body>
+</html>
